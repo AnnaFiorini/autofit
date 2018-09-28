@@ -1811,13 +1811,19 @@ if __name__ == '__main__': #multiprocessing imports script as module
     f_time.write("Time without socket:" + str(int(hours)) + ":" + str(int(minutes)) + ":" + str(int(seconds)) + "\n" )
     print "Time to fitting triples (local): "+str(int(hours)) + ":" + str(int(minutes)) + ":" + str(int(seconds)) 
 
+    hosts = []
+    hosts[0]="172.31.95.189"
+    hosts[1]="172.31.86.93"
+    hosts[2]="172.31.86.97"
+    hosts[3]="172.31.83.195"
+    
     num_result=0
     if num_server!=0:
         for num in range(num_server):
             file_rec = open("sorted_final_outServer%s.txt"%(str(num_result)),"w")
             PORT = 50007              # The same port as used by the server
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.connect(("127.0.0.1", PORT))
+            s.connect((hosts[num], PORT))
             data = s.recv(1024)
             while (data):
                 file_rec.write(data)
