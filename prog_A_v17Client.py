@@ -1600,7 +1600,7 @@ def thread_creation(list_a,list_b,list_c,trans_1,trans_2,trans_3,top_17,peaklist
 
     sorted_full_list = sorted(unsorted_full_list, key=lambda entry: entry[6])
 
-    num_thread=8
+    num_thread=2
     start=0
     stop = len(sorted_full_list)/num_thread
     t = []
