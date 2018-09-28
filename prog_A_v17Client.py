@@ -1812,10 +1812,10 @@ if __name__ == '__main__': #multiprocessing imports script as module
     print "Time to fitting triples (local): "+str(int(hours)) + ":" + str(int(minutes)) + ":" + str(int(seconds)) 
 
     hosts = []
-    hosts[0]="172.31.95.189"
-    hosts[1]="172.31.86.93"
-    hosts[2]="172.31.86.97"
-    hosts[3]="172.31.83.195"
+    hosts.append("172.31.95.189")
+    hosts.append("172.31.86.93")
+    hosts.append("172.31.86.97")
+    hosts.append("172.31.83.195")
     
     num_result=0
     if num_server!=0:
