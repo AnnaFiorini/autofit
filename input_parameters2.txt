@@ -7,7 +7,7 @@ DK: 0.0
 dJ: 0.0 
 dK: 0.0 
 processors: 4 
-folder: provaCloud 
+folder: amazon300 
 num_server: 4 
 trans_1:
 -6.2036
