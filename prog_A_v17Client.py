@@ -1729,7 +1729,7 @@ if __name__ == '__main__': #multiprocessing imports script as module
     f_time.write("Start:" + str(datetime.datetime.now()) + "\n")
 
     sockets = []
-	hosts = []
+    hosts = []
     hosts.append("172.31.95.189")
     hosts.append("172.31.86.93")
     hosts.append("172.31.86.97")
