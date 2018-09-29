@@ -286,6 +286,14 @@ def thread_creation(list_a,list_b,list_c,trans_1,trans_2,trans_3,top_17,peaklist
     os.system("sort -r 'final_output%s.txt'>sorted_final_out%s.txt"%(str(file_num),str(file_num)))#sorts output by score
     
 if __name__ == '__main__':
+
+    HOST = ''                 # Symbolic name meaning all available interfaces
+    PORT = 50007              # Arbitrary non-privileged port
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((HOST, PORT))
+    s.listen(1)
+    conn, addr = s.accept()
+    print 'Connected by', addr
     
     input_parameter=str(sys.argv[1])
     
@@ -478,13 +486,7 @@ if __name__ == '__main__':
     a = subprocess.Popen('cat sorted_final_out*.txt |sort -t "=" -k 4 -n > sorted_omc_catS.txt', shell=True)
     a.wait()
     
-    HOST = ''                 # Symbolic name meaning all available interfaces
-    PORT = 50007              # Arbitrary non-privileged port
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind((HOST, PORT))
-    s.listen(1)
-    conn, addr = s.accept()
-    print 'Connected by', addr
+
 
     file_send = open("sorted_omc_catS.txt")
     data = file_send.read(1024)

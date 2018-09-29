@@ -1623,6 +1623,7 @@ def thread_creation(list_a,list_b,list_c,trans_1,trans_2,trans_3,top_17,peaklist
     os.system("sort -r 'final_output%s.txt'>sorted_final_out%s.txt"%(str(file_num),str(file_num)))#sorts output by score
     
 if __name__ == '__main__': #multiprocessing imports script as module
+
     
     input_parameter=str(sys.argv[1])
     
@@ -1726,6 +1727,21 @@ if __name__ == '__main__': #multiprocessing imports script as module
     f_time = open("time.txt","w")
     inizio = time.time()
     f_time.write("Start:" + str(datetime.datetime.now()) + "\n")
+
+    sockets = []
+	hosts = []
+    hosts.append("172.31.95.189")
+    hosts.append("172.31.86.93")
+    hosts.append("172.31.86.97")
+    hosts.append("172.31.83.195")
+	
+    if num_server!=0:
+        for num in range(num_server):
+            file_rec = open("sorted_final_outServer%s.txt"%(str(num_result)),"w")
+            PORT = 50007              # The same port as used by the server
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((hosts[num], PORT))
+			sockets.append(s)
     
     trans_1=tuple(trans_1)
     trans_2=tuple(trans_2)
@@ -1811,19 +1827,12 @@ if __name__ == '__main__': #multiprocessing imports script as module
     f_time.write("Time without socket:" + str(int(hours)) + ":" + str(int(minutes)) + ":" + str(int(seconds)) + "\n" )
     print "Time to fitting triples (local): "+str(int(hours)) + ":" + str(int(minutes)) + ":" + str(int(seconds)) 
 
-    hosts = []
-    hosts.append("172.31.95.189")
-    hosts.append("172.31.86.93")
-    hosts.append("172.31.86.97")
-    hosts.append("172.31.83.195")
+
     
     num_result=0
     if num_server!=0:
-        for num in range(num_server):
+        for s in sockets:
             file_rec = open("sorted_final_outServer%s.txt"%(str(num_result)),"w")
-            PORT = 50007              # The same port as used by the server
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.connect((hosts[num], PORT))
             data = s.recv(1024)
             while (data):
                 file_rec.write(data)
