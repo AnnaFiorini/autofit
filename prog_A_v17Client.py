@@ -1741,7 +1741,7 @@ if __name__ == '__main__': #multiprocessing imports script as module
             PORT = 50007              # The same port as used by the server
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((hosts[num], PORT))
-			sockets.append(s)
+            sockets.append(s)
     
     trans_1=tuple(trans_1)
     trans_2=tuple(trans_2)
