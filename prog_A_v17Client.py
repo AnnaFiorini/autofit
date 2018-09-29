@@ -1737,7 +1737,6 @@ if __name__ == '__main__': #multiprocessing imports script as module
 	
     if num_server!=0:
         for num in range(num_server):
-            file_rec = open("sorted_final_outServer%s.txt"%(str(num_result)),"w")
             PORT = 50007              # The same port as used by the server
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((hosts[num], PORT))
