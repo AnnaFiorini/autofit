@@ -1600,7 +1600,7 @@ def thread_creation(list_a,list_b,list_c,trans_1,trans_2,trans_3,top_17,peaklist
 
     sorted_full_list = sorted(unsorted_full_list, key=lambda entry: entry[6])
 
-    num_thread=2
+    num_thread=4
     start=0
     stop = len(sorted_full_list)/num_thread
     t = []
@@ -1730,10 +1730,10 @@ if __name__ == '__main__': #multiprocessing imports script as module
 
     sockets = []
     hosts = []
-    hosts.append("ec2-18-208-186-247.compute-1.amazonaws.com")
-    hosts.append("ec2-18-232-105-169.compute-1.amazonaws.com")
-    hosts.append("ec2-34-226-233-209.compute-1.amazonaws.com")
-    hosts.append("ec2-34-239-150-20.compute-1.amazonaws.com")
+    hosts.append("172.31.95.189")
+    hosts.append("172.31.86.93")
+    hosts.append("172.31.86.97")
+    hosts.append("172.31.83.195")
 	
     if num_server!=0:
         for num in range(num_server):
