@@ -1730,8 +1730,8 @@ if __name__ == '__main__': #multiprocessing imports script as module
 
     sockets = []
     hosts = []
-    hosts.append("ec2-18-232-105-169.compute-1.amazonaws.com")
-    hosts.append("ec2-34-226-233-209.compute-1.amazonaws.com")
+    hosts.append("172.31.86.93")
+    hosts.append("172.31.86.97")
 #    hosts.append("172.31.95.189")
 #    hosts.append("172.31.86.93")
 #    hosts.append("172.31.86.97")
@@ -1739,7 +1739,7 @@ if __name__ == '__main__': #multiprocessing imports script as module
 	
     if num_server!=0:
         for num in range(num_server):
-            PORT = 50008              # The same port as used by the server
+            PORT = 50007              # The same port as used by the server
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((hosts[num], PORT))
             sockets.append(s)
