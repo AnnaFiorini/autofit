@@ -1737,7 +1737,7 @@ if __name__ == '__main__': #multiprocessing imports script as module
 	
     if num_server!=0:
         for num in range(num_server):
-            PORT = 50007              # The same port as used by the server
+            PORT = 50008              # The same port as used by the server
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((hosts[num], PORT))
             sockets.append(s)

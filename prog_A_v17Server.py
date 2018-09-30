@@ -288,7 +288,7 @@ def thread_creation(list_a,list_b,list_c,trans_1,trans_2,trans_3,top_17,peaklist
 if __name__ == '__main__':
 
     HOST = ''                 # Symbolic name meaning all available interfaces
-    PORT = 50007              # Arbitrary non-privileged port
+    PORT = 50008              # Arbitrary non-privileged port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((HOST, PORT))
     s.listen(1)
