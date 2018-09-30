@@ -1730,10 +1730,12 @@ if __name__ == '__main__': #multiprocessing imports script as module
 
     sockets = []
     hosts = []
-    hosts.append("172.31.95.189")
     hosts.append("172.31.86.93")
     hosts.append("172.31.86.97")
-    hosts.append("172.31.83.195")
+#    hosts.append("172.31.95.189")
+#    hosts.append("172.31.86.93")
+#    hosts.append("172.31.86.97")
+#    hosts.append("172.31.83.195")
 	
     if num_server!=0:
         for num in range(num_server):
