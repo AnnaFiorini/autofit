@@ -1,4 +1,4 @@
-anisole                                         Wed Mar Mon Oct  1 08:25:03 2018
+anisole                                         Wed Mar Mon Oct  1 08:59:23 2018
 LINES REQUESTED=  500 NUMBER OF PARAMETERS=  8 NUMBER OF ITERATIONS=  5
   MARQUARDT PARAMETER = 0.0000E+00 max (OBS-CALC)/ERROR =1.0000E+05
                               PARAMETERS - A.PRIORI ERROR 
@@ -220,4 +220,4 @@ MARQUARDT PARAMETER = 0.000297379, TRUST EXPANSION = 1.00
   5  6 -0.000000  5  7  0.000000  5  8  0.000000  6  1  0.000000  6  2  0.000000  6  3  0.000000  6  4 -0.000000  6  5 -0.000000
   6  7  0.000000  6  8 -0.000000  7  1  0.000000  7  2  0.000000  7  3  0.000000  7  4  0.000000  7  5  0.000000  7  6  0.000000
   7  8 -0.000000  8  1 -0.000000  8  2 -0.000000  8  3 -0.000000  8  4  0.000000  8  5  0.000000  8  6 -0.000000  8  7 -0.000000
-anisole                                         Wed Mar Mon Oct  1 08:25:03 2018
+anisole                                         Wed Mar Mon Oct  1 08:59:23 2018
