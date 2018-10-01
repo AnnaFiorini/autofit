@@ -7,7 +7,7 @@ DK: 0.0
 dJ: 0.0 
 dK: 0.0 
 processors: 4 
-folder: amazon3nodi 
+folder: amazon3nodi2 
 num_server: 2 
 trans_1:
 -6.2036
