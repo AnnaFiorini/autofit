@@ -1,0 +1,1 @@
+score =  09 Const = 868.63 402.212 308.335 average omc = 0.156654535861  avg w/out peaks over edge = 0.156654535861 avg w/ inten penalty = 0.156654535861
